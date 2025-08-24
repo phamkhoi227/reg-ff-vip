@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Cấu hình IOS Fake</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    .menu {
+      max-width: 400px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+    .switch input { display: none; }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0;
+      right: 0; bottom: 0;
+      background-color: #ccc;
+      border-radius: 24px;
+      transition: .3s;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background: white;
+      border-radius: 50%;
+      transition: .3s;
+    }
+    input:checked + .slider {
+      background-color: #007aff;
+    }
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    .section {
+      margin: 20px 0 10px;
+      font-weight: bold;
+      color: #444;
+    }
+    .slider-input {
+      width: 100%;
+      margin: 10px 0;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #007aff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <h2>Cấu hình IOS Fake</h2>
+
+    <div class="toggle">
+      <span>Aim Cổ</span>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle">
+      <span>Nhẹ Tâm</span>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle">
+      <span>Chống Rung Tâm</span>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="section">Độ Nhạy</div>
+    <label>Tốc Độ Con Trỏ: <input type="range" min="0" max="2" step="0.01" value="1.02" class="slider-input"></label><br>
+    <label>Nhìn Xung Quanh: <input type="range" min="0" max="2" step="0.01" value="1.51" class="slider-input"></label><br>
+    <label>Độ Nhạy Drag: <input type="range" min="0" max="2" step="0.01" value="0.01" class="slider-input"></label><br>
+    <label>Tốc Độ Cảm Ứng: <input type="range" min="0" max="2" step="0.01" value="0.01" class="slider-input"></label><br>
+
+    <button>Lưu Cài Đặt</button>
+  </div>
+</body>
+</html>
